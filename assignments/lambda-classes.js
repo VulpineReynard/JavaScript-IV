@@ -25,6 +25,14 @@ class Instructor extends Person {
   grade(student, subject) {
     console.log(student.name + " receives a perfect score on " + subject);
   }
+  gradeStudent(student) {
+    let points = Math.floor((Math.random() * 20) + 1);
+    var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+    points = points * plusOrMinus;
+    student.grade = student.grade + points;
+    console.log(this.name + "has adjusted " + student.name + "'s grade by " + points + " points");
+    console.log(student.name + "'s new grade is " + student.grade);
+  }
 }
 
 class Student extends Person {
@@ -33,6 +41,7 @@ class Student extends Person {
     this.previousBackground = studentAttrs.previousBackground;
     this.className = studentAttrs.className;
     this.favSubjects = studentAttrs.favSubjects;
+    this.grade = studentAttrs.grade;
   }
   // STUDENT FUNCTIONS
   listsSubjects(){
@@ -43,6 +52,10 @@ class Student extends Person {
   }
   sprintChallenge(subject) {
     console.log(this.name + " has begun the sprint challenge on " + subject);
+  }
+  graduate() {
+    if (this.grade >= 70) { console.log(this.name + " has graduated Lambda School with a grade of " + this.grade + "!"); }
+                     else { console.log(this.name + " has failed Lambda School with a grade of " + this.grade + ". :("); }
   }
 }
 
@@ -70,7 +83,7 @@ const justin = new Student({
   previousBackground: "Computer Science & Chemistry",
   className: "Full Stack Web Development",
   favSubjects: ['OOP', 'Polyurethanes'],
-  grade: Math.floor((Math.random() * 100) + 1)
+  grade: 75
 });
 
 const will = new Student({
@@ -80,7 +93,7 @@ const will = new Student({
   previousBackground: 'Action Movies',
   className: 'Full Stack Web Development',
   favSubjects: ['The Fresh Prince', 'Anything with action'],
-  grade: Math.floor((Math.random() * 100) + 1)
+  grade: 85
 });
 
 const john = new Student({
@@ -90,7 +103,7 @@ const john = new Student({
   previousBackground: 'Hitman',
   className: 'Full Stack Web Development',
   favSubjects: ['Guns', 'Stealth'],
-  grade: Math.floor((Math.random() * 100) + 1)
+  grade: 70
 });
 
 // INSTRUCTOR OBJECTS
@@ -167,3 +180,12 @@ will.PRAssignment('Javascript IV'); //-----------------"Will Smith has submitted
 john.sprintChallenge('Applied Javascript'); //---------"John Wick has begun the sprint challenge on Applied Javascript"
 batman.standup('Web21'); //----------------------------"Bruce Wayne announces to Web21, @channel standy times!"
 walter.debugsCode(justin, "JavaScript IV"); //---------"Walter White debugs Justin Renninger's code on JavaScript IV"
+fred.gradeStudent(justin);
+dan.gradeStudent(justin);
+justin.graduate();
+
+let int = function numberRange(min, max){
+  return Math.round(Math.random() * (max-min)) + min;
+}
+
+console.log(int(1, 100));

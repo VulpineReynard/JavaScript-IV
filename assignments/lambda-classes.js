@@ -23,7 +23,7 @@ class Instructor extends Person {
     console.log("Today we are learning about " + subject);
   }
   grade(student, subject) {
-    console.log(student + " receives a perfect score on " + subject);
+    console.log(student.name + " receives a perfect score on " + subject);
   }
 }
 
@@ -32,7 +32,7 @@ class Student extends Person {
     super(studentAttrs);
     this.previousBackground = studentAttrs.previousBackground;
     this.className = studentAttrs.className;
-    this.favSubjects = studentAttrs.favLanguage;
+    this.favSubjects = studentAttrs.favSubjects;
   }
   // STUDENT FUNCTIONS
   listsSubjects(){
@@ -69,7 +69,7 @@ const justin = new Student({
   location: "Pennsylvania",
   previousBackground: "Computer Science & Chemistry",
   className: "Full Stack Web Development",
-  favSubjects: ['OOP', 'Polyurethanes', ]
+  favSubjects: ['OOP', 'Polyurethanes']
 });
 
 const will = new Student({
@@ -151,3 +151,16 @@ const walter = new ProjectManagers({
   gradClassName: 'Full Stack Web Development',
   favInstructor: 'Dan Levy'
 });
+
+console.log(justin.previousBackground); //-------------"Computer Science & Chemistry"
+console.log(fred.favLanguage); //----------------------"Ruby On Rails"
+console.log(batman.catchPhrase); //--------------------"I'm Batman"
+
+walter.speak(); //-------------------------------------"Hello my name is Walter White, I am from Albuquerque"
+fred.demo(fred.favLanguage); //------------------------"Today we are learning about Ruby On Rails"
+dan.grade(john, 'Javascript IV'); //-------------------"John Wick receives a perfect score on Javascript IV"
+justin.listsSubjects(); //-----------------------------"OOP \n Polyurethanes"
+will.PRAssignment('Javascript IV'); //-----------------"Will Smith has submitted a PR for Javascript IV"
+john.sprintChallenge('Applied Javascript'); //---------"John Wick has begun the sprint challenge on Applied Javascript"
+batman.standup('Web21'); //----------------------------"Bruce Wayne announces to Web21, @channel standy times!"
+walter.debugsCode(justin, "JavaScript IV"); //---------"Walter White debugs Justin Renninger's code on JavaScript IV"

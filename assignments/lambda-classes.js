@@ -60,3 +60,32 @@ class ProjectManagers extends Instructor {
     console.log(this.name + " debugs " + studentObj.name + "'s code on " + subject);
   }
 }
+
+
+// STUDENT OBJECTS
+const Justin = new Student({
+  name: "Justin Renninger",
+  age: 25,
+  location: "Pennsylvania",
+  previousBackground: "Computer Science & Chemistry",
+  className: "Full Stack Web Development",
+  favSubjects: ['OOP', 'Polyurethanes', ]
+});
+
+const Will = new Student({
+  name: 'Will Smith',
+  age: '40',
+  location: 'California',
+  previousBackground: 'Action Movies',
+  className: 'Full Stack Web Development',
+  favSubjects: ['The Fresh Prince', 'Anything with action']
+});
+
+const John = new Student({
+  name: 'John Wick',
+  age: 30,
+  location: 'Unknown',
+  previousBackground: 'Hitman',
+  className: 'Full Stack Web Development',
+  favSubjects: ['Guns', 'Stealth']
+});

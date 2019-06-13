@@ -63,7 +63,7 @@ class ProjectManagers extends Instructor {
 
 
 // STUDENT OBJECTS
-const Justin = new Student({
+const justin = new Student({
   name: "Justin Renninger",
   age: 25,
   location: "Pennsylvania",
@@ -72,7 +72,7 @@ const Justin = new Student({
   favSubjects: ['OOP', 'Polyurethanes', ]
 });
 
-const Will = new Student({
+const will = new Student({
   name: 'Will Smith',
   age: '40',
   location: 'California',
@@ -81,11 +81,39 @@ const Will = new Student({
   favSubjects: ['The Fresh Prince', 'Anything with action']
 });
 
-const John = new Student({
+const john = new Student({
   name: 'John Wick',
   age: 30,
   location: 'Unknown',
   previousBackground: 'Hitman',
   className: 'Full Stack Web Development',
   favSubjects: ['Guns', 'Stealth']
+});
+
+// INSTRUCTOR OBJECTS
+const fred = new Instructor({
+  name: 'Fred Flintstone',
+  location: 'Bedrock',
+  age: 37,
+  favLanguage: 'Ruby On Rails',
+  specialty: 'Front-end',
+  catchPhrase: `Yabba Dabba Doo`
+});
+
+const dan = new Instructor({
+  name: 'Dan Levy',
+  location: 'Bedrock',
+  age: 32,
+  favLanguage: 'JavaScript',
+  specialty: 'Front-end',
+  catchPhrase: `Don't forget the homies`
+});
+
+const colin = new Instructor({
+  name: 'Colin Frasier',
+  location: 'New Jersey',
+  age: 49,
+  favLanguage: 'C++',
+  specialty: 'Computer Engineering',
+  catchPhrase: `If you don't use get/set, you're wrong.`
 });

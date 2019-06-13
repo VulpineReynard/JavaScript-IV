@@ -117,3 +117,37 @@ const colin = new Instructor({
   specialty: 'Computer Engineering',
   catchPhrase: `If you don't use get/set, you're wrong.`
 });
+
+// PROJECT MANAGER OBJECTS
+const ww = new ProjectManagers({
+  name: 'Wonder Woman',
+  age: 26,
+  location: 'Paradise Island',
+  favLanguage: 'The Common Tongue',
+  specialty: 'Whipping things',
+  catchPhrase: 'By The Goddes!',
+  gradClassName: 'Full Stack Web Development',
+  favInstructor: 'Zeus'
+});
+
+const batman = new ProjectManagers({
+  name: 'Bruce Wayne',
+  age: 35,
+  location: 'Bat Cave',
+  favLanguage: 'Sonar',
+  specialty: 'Being emo',
+  catchPhrase: "I'm Batman",
+  gradClassName: 'Full Stack Web Development',
+  favInstructor: 'Alfred'
+});
+
+const walter = new ProjectManagers({
+  name: 'Walter White',
+  age: 60,
+  location: 'Albuquerque',
+  favLanguage: 'English',
+  specialty: 'Chemistry',
+  catchPhrase: "Jesse!",
+  gradClassName: 'Full Stack Web Development',
+  favInstructor: 'Dan Levy'
+});

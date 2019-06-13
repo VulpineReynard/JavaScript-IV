@@ -69,7 +69,8 @@ const justin = new Student({
   location: "Pennsylvania",
   previousBackground: "Computer Science & Chemistry",
   className: "Full Stack Web Development",
-  favSubjects: ['OOP', 'Polyurethanes']
+  favSubjects: ['OOP', 'Polyurethanes'],
+  grade: Math.floor((Math.random() * 100) + 1)
 });
 
 const will = new Student({
@@ -78,7 +79,8 @@ const will = new Student({
   location: 'California',
   previousBackground: 'Action Movies',
   className: 'Full Stack Web Development',
-  favSubjects: ['The Fresh Prince', 'Anything with action']
+  favSubjects: ['The Fresh Prince', 'Anything with action'],
+  grade: Math.floor((Math.random() * 100) + 1)
 });
 
 const john = new Student({
@@ -87,7 +89,8 @@ const john = new Student({
   location: 'Unknown',
   previousBackground: 'Hitman',
   className: 'Full Stack Web Development',
-  favSubjects: ['Guns', 'Stealth']
+  favSubjects: ['Guns', 'Stealth'],
+  grade: Math.floor((Math.random() * 100) + 1)
 });
 
 // INSTRUCTOR OBJECTS
